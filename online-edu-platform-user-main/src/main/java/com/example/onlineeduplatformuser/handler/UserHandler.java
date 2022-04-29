@@ -95,7 +95,6 @@ public class UserHandler {
                 "MyNickNameisErjuerAndNameisMinsu".getBytes(StandardCharsets.UTF_8));
 
         final Mono<String> tokkens = user.map(mapper -> {
-            System.out.println("++++++++++++" + mapper.getUserType());
             payloads.put("typ", mapper.getUserType());
             payloads.put("id", mapper.getUserId());
             payloads.put("exp", date);
